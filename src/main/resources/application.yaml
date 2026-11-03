@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: E_Commerce_API
+  datasource:
+    url: jdbc:postgresql://localhost:5432/E_Commerce_DB
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  file:
+    name: ./logs/E-Commerce.log
+  logback:
+    rollingPolicy:
+      max-file-size: 50MB
+      max-history: 9
+      file-name-pattern: ${logging.file.name}.%d{yyyy-MM-dd}.%i.log
+  level:
+    web: info
+    root: info
+    org.springframework.security: DEBUG
+springdoc:
+        swagger-ui:
+          path: /swagger-ui/index.html
+        api-docs:
+          enabled: true
+app:
+  jwt:
+    secret-key: "5ZQ1fO9R1n5A8SC8H+KjQwoB6H0D+QYkJ6j8sL9y9Tg="
+    access-token-expiration: 900000000
+  admin:
+    email: admin@gmail.com
+    password: admin123
