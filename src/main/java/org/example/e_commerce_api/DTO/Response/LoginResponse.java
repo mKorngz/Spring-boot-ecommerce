@@ -1,12 +1,12 @@
 package org.example.e_commerce_api.DTO.Response;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Builder
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class LoginResponse {
     private String accessToken;
     private String tokenType;

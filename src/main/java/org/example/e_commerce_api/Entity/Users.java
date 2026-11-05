@@ -21,7 +21,7 @@ public class Users extends UserAuditableEntity {
     @Column(nullable = false)
     private String fullName;
 
-    @Column(name = "User_ID", unique = true, nullable = false)
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Column(nullable = false)
@@ -37,4 +37,10 @@ public class Users extends UserAuditableEntity {
     inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
+
+    @OneToOne(mappedBy = "users", fetch = FetchType.LAZY)
+    private Carts cart;
+
+    @OneToMany(mappedBy = "users", fetch = FetchType.LAZY)
+    private Set<Orders> orders;
 }

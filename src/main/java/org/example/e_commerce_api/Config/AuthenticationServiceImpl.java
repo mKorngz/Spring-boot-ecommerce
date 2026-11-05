@@ -7,11 +7,13 @@ import org.example.e_commerce_api.DTO.Request.RegisterRequest;
 import org.example.e_commerce_api.DTO.Response.LoginResponse;
 import org.example.e_commerce_api.DTO.Response.MeResponse;
 import org.example.e_commerce_api.DTO.Response.RegisterResponse;
+import org.example.e_commerce_api.Entity.Carts;
 import org.example.e_commerce_api.Entity.Role;
 import org.example.e_commerce_api.Entity.Users;
 import org.example.e_commerce_api.Exception.ResourceNotFoundException;
 import org.example.e_commerce_api.Exception.UnauthorizedException;
 import org.example.e_commerce_api.Mapper.RoleMapper;
+import org.example.e_commerce_api.Repository.CartRepository;
 import org.example.e_commerce_api.Repository.RoleRepository;
 import org.example.e_commerce_api.Repository.UserRepository;
 import org.springframework.context.annotation.Bean;
@@ -70,6 +72,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 .roles(Set.of(normalUserRole))
                 .build();
         user = userRepository.save(user);
+
         return RegisterResponse.builder()
                 .id(user.getId())
                 .fullName(user.getFullName())

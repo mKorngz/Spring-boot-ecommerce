@@ -145,6 +145,85 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                 HttpStatus.CONFLICT, "Resource was modified by another request, please retry");
     }
 
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleProductNotFound(
+            ProductNotFoundException ex
+    ) {
+
+        return BaseBodyResponse.failed(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(CartNotFoundException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleCartNotFound(
+            CartNotFoundException ex
+    ) {
+
+        return BaseBodyResponse.failed(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(CartItemNotFoundException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleCartItemNotFound(
+            CartItemNotFoundException ex
+    ) {
+
+        return BaseBodyResponse.failed(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleUserNotFound(
+            UserNotFoundException ex
+    ) {
+
+        return BaseBodyResponse.failed(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(InsufficientStockException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleInsufficientStock(
+            InsufficientStockException ex
+    ) {
+
+        return BaseBodyResponse.failed(
+                HttpStatus.BAD_REQUEST,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(UnauthorizedCartAccessException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleUnauthorizedAccess(
+            UnauthorizedCartAccessException ex
+    ) {
+
+        return BaseBodyResponse.failed(
+                HttpStatus.FORBIDDEN,
+                ex.getMessage()
+        );
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleGeneralException(
+            Exception ex
+    ) {
+
+        log.error("Unexpected error", ex);
+
+        return BaseBodyResponse.failed(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Internal server error"
+        );
+    }
+
     @ExceptionHandler(DataAccessException.class)
     public ResponseEntity<BaseBodyResponse<Void>> handleDataAccess(
             DataAccessException ex, HttpServletRequest request) {
@@ -153,4 +232,40 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                 HttpStatus.SERVICE_UNAVAILABLE, "Database is temporarily unavailable");
     }
 
+    @ExceptionHandler(OrderNotFoundException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleOrderNotFound(
+            OrderNotFoundException ex
+    ) {
+        return BaseBodyResponse.failed(
+                HttpStatus.NOT_FOUND,
+                ex.getMessage()
+        );
+    }
+    @ExceptionHandler(EmptyOrderException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleEmptyOrder(
+            EmptyOrderException ex
+    ) {
+        return BaseBodyResponse.failed(
+                HttpStatus.BAD_REQUEST,
+                ex.getMessage()
+        );
+    }
+    @ExceptionHandler(InvalidOrderStatusTransitionException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleOrderStatusTransition(
+            InvalidOrderStatusTransitionException ex
+    ) {
+        return BaseBodyResponse.failed(
+                HttpStatus.BAD_REQUEST,
+                ex.getMessage()
+        );
+    }
+    @ExceptionHandler(UnauthorizedOrderAccessException.class)
+    public ResponseEntity<BaseBodyResponse<Void>> handleUnauthorizedOrder(
+            UnauthorizedOrderAccessException ex
+    ) {
+        return BaseBodyResponse.failed(
+                HttpStatus.FORBIDDEN,
+                ex.getMessage()
+        );
+    }
 }
