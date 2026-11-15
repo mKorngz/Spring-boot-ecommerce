@@ -10,6 +10,7 @@ import org.example.e_commerce_api.Mapper.ProductMapper;
 import org.example.e_commerce_api.Repository.CategoryRepository;
 import org.example.e_commerce_api.Repository.ProductRepository;
 import org.example.e_commerce_api.Service.ProductService;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -72,7 +73,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductResponse> findAll() {
-        List<Products> productList = productRepository.findAll();
+        List<Products> productList = productRepository.findAll(Sort.by(
+                Sort.Direction.ASC,
+                "id"
+        ));
         return productList.stream().map(ProductMapper::toProductResponse).toList();
     }
 

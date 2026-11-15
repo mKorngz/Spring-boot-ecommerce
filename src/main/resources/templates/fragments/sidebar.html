@@ -1,0 +1,73 @@
+<div th:fragment="sidebar(activePage)"
+     class="col-lg-2 sidebar">
+
+    <h3 class="brand">
+        ✨ MK Commerce
+    </h3>
+
+    <div class="menu">
+
+        <a th:href="@{/admin/dashboard}"
+           th:class="${activePage == 'dashboard'} ?
+           'menu-link active' : 'menu-link'">
+
+            <i class="bi bi-grid-1x2-fill me-2"></i>
+            Dashboard
+
+        </a>
+
+        <a th:href="@{/admin/products}"
+           th:class="${activePage == 'products'} ?
+           'menu-link active' : 'menu-link'">
+
+            <i class="bi bi-box-seam me-2"></i>
+            Products
+
+        </a>
+
+        <a th:href="@{/admin/categories}"
+           th:class="${activePage == 'categories'} ?
+           'menu-link active' : 'menu-link'">
+
+            <i class="bi bi-folder me-2"></i>
+            Categories
+
+        </a>
+
+        <a href="#"
+           th:class="${activePage == 'orders'} ?
+           'menu-link active' : 'menu-link'">
+
+            <i class="bi bi-cart3 me-2"></i>
+            Orders
+
+        </a>
+
+    </div>
+
+    <div class="sidebar-footer">
+
+        <div class="user-card">
+
+            <h6 id="adminName">
+                Admin
+            </h6>
+
+            <small>
+                Administrator
+            </small>
+
+        </div>
+
+        <a href="#"
+           class="logout-btn"
+           onclick="logout()">
+
+            <i class="bi bi-box-arrow-right me-2"></i>
+            Logout
+
+        </a>
+
+    </div>
+
+</div>

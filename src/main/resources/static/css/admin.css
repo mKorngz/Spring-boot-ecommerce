@@ -1,0 +1,431 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+    background-color: #090d16;
+    color: #e2e8f0;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0d1322 0%, #090d16 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 18px;
+}
+
+.brand {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.02em;
+    margin-bottom: 36px;
+    padding-left: 8px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
+}
+
+.menu-link.active {
+    background: rgba(0, 229, 255, 0.1);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+/* =========================
+   SIDEBAR FOOTER
+========================= */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.user-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.user-card h6 {
+    margin: 0;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.user-card small {
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.logout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+    background: rgba(239, 68, 68, 0.2);
+}
+
+/* =========================
+   MAIN CONTENT & HERO
+========================= */
+
+.main-content {
+    padding: 28px;
+}
+
+.hero-card {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.12) 0%, rgba(99, 102, 241, 0.08) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+
+.hero-card h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #f8fafc;
+    margin-bottom: 6px;
+}
+
+.hero-card p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #22d3ee;
+    color: #090d16;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.hero-btn:hover {
+    background: #67e8f9;
+    transform: translateY(-2px);
+}
+
+.hero-btn.secondary {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+}
+
+.hero-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stat-card {
+    background: #0f1623;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(34, 211, 238, 0.35);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Optional tinted icon helpers */
+.icon-blue   { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.icon-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+.icon-cyan   { background: rgba(6, 182, 212, 0.15);  color: #22d3ee; }
+.icon-green  { background: rgba(34, 197, 94, 0.15);  color: #4ade80; }
+.icon-amber  { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+
+.stat-card h6 {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.stat-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* =========================
+   RECENT ORDERS & TABLE
+========================= */
+
+.recent-orders {
+    background: #0f1623;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin: 0;
+}
+
+.section-header span {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+.category-badge{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:
+            rgba(0,229,255,.15);
+
+    color:#00e5ff;
+
+    font-size:.8rem;
+
+    font-weight:600;
+}
+/* Fix Bootstrap 5.3 white table background */
+.orders-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #cbd5e1;
+    --bs-table-border-color: rgba(255, 255, 255, 0.08);
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.03);
+    --bs-table-hover-color: #f8fafc;
+    margin-bottom: 0;
+}
+
+.orders-table > :not(caption) > * > * {
+    background-color: transparent !important;
+    color: inherit;
+    padding: 14px 12px;
+    vertical-align: middle;
+}
+
+.orders-table thead th {
+    color: #64748b !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.orders-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+}
+
+.status.pending {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.status.completed {
+    background: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .brand {
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        margin-bottom: 20px;
+    }
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-content{
+
+    background:#0f172a;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+}
+
+.modal-header{
+
+    border-bottom:
+            1px solid rgba(255,255,255,.08);
+}
+
+.modal-title{
+
+    color:white;
+
+    font-weight:700;
+}
+
+.modal-body{
+
+    padding:25px;
+}
+
+.modal-body label{
+
+    color:white;
+
+    font-weight:500;
+}
+
+.form-control{
+
+    background:#1e293b;
+
+    color:white;
+
+    border:
+            1px solid rgba(255,255,255,.08);
+}
+
+.form-control:focus{
+
+    background:#1e293b;
+
+    color:white;
+
+    border-color:#00e5ff;
+
+    box-shadow:
+            0 0 0 0.2rem
+            rgba(0,229,255,.15);
+}
+
+.form-label{
+
+    color:#cbd5e1;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+.form-control::placeholder{
+
+    color:#94a3b8;
+
+    opacity:1;
+}
+
+.btn-close{
+
+    filter:invert(1);
+}

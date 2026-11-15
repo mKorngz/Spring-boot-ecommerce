@@ -1,0 +1,335 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#050816;
+
+    overflow:hidden;
+
+    position:relative;
+
+    font-family:"Segoe UI",sans-serif;
+
+    color:white;
+}
+
+/* ==========================
+   FLOATING GLOW CIRCLES
+========================== */
+
+.bg-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-1;
+
+    animation:floatGlow 10s ease-in-out infinite;
+}
+
+.circle-1{
+
+    width:450px;
+    height:450px;
+
+    background:#00e5ff;
+
+    top:-150px;
+    left:-150px;
+
+    opacity:.15;
+}
+
+.circle-2{
+
+    width:400px;
+    height:400px;
+
+    background:#7c4dff;
+
+    bottom:-150px;
+    right:-150px;
+
+    opacity:.15;
+}
+
+.circle-3{
+
+    width:250px;
+    height:250px;
+
+    background:#00e5ff;
+
+    top:30%;
+    right:10%;
+
+    opacity:.08;
+}
+
+@keyframes floatGlow{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-30px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.auth-container{
+
+    width:100%;
+    max-width:520px;
+
+    padding:20px;
+}
+
+.auth-card{
+
+    background:
+            rgba(255,255,255,.05);
+
+    backdrop-filter:
+            blur(25px);
+
+    border:
+            1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:
+            0 0 40px rgba(0,229,255,.10);
+}
+
+/* ==========================
+   LOGO CIRCLE
+========================== */
+
+.logo-wrapper{
+
+    width:190px;
+    height:190px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.logo-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:190px;
+    height:190px;
+
+    border-radius:50%;
+
+    border:
+            2px solid rgba(0,229,255,.25);
+
+    box-shadow:
+            0 0 25px rgba(0,229,255,.20),
+            inset 0 0 25px rgba(0,229,255,.08);
+
+    animation:pulse 4s ease-in-out infinite;
+}
+
+.logo{
+
+    width:130px;
+
+    border-radius:16px;
+
+    z-index:2;
+
+    filter:
+            drop-shadow(
+                    0 0 20px rgba(0,229,255,.5)
+            );
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.05);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:.7;
+    }
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.app-title{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#8d98ae;
+
+    margin-bottom:30px;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.form-control{
+
+    height:55px;
+
+    border-radius:14px;
+
+    border:
+            1px solid rgba(255,255,255,.1);
+
+    background:
+            rgba(255,255,255,.04);
+
+    color:white;
+}
+
+.form-control::placeholder{
+    color:#75819c;
+}
+
+.form-control:focus{
+
+    background:
+            rgba(255,255,255,.06);
+
+    color:white;
+
+    border-color:#00e5ff;
+
+    box-shadow:
+            0 0 15px rgba(0,229,255,.3);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.btn-login{
+
+    width:100%;
+    height:55px;
+
+    background:transparent;
+
+    border:
+            1px solid #00e5ff;
+
+    border-radius:14px;
+
+    color:#00e5ff;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.btn-login:hover{
+
+    background:
+            rgba(0,229,255,.08);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+            0 0 20px rgba(0,229,255,.3);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.auth-footer{
+
+    text-align:center;
+
+    margin-top:25px;
+}
+
+.auth-footer span{
+
+    color:#8d98ae;
+}
+
+.auth-footer a{
+
+    color:#00e5ff;
+
+    text-decoration:none;
+
+    margin-left:5px;
+
+    font-weight:600;
+}
+
+.auth-footer a:hover{
+
+    color:white;
+}
+.alert{
+
+    border-radius:12px;
+
+    margin-top:10px;
+
+    margin-bottom:15px;
+}

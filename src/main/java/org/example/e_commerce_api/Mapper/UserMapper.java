@@ -13,8 +13,7 @@ import java.util.stream.Collectors;
 public class UserMapper {
     public static UserResponse toResponse(Users user) {
         return UserResponse.builder()
-                .id(user.getId())
-                .username(user.getFullName())
+                .id(user.getId()).username(user.getFullName())
                 .email(user.getEmail())
                 .enabled(user.isEnabled())
                 .role(getRoleResponse(user.getRoles()))

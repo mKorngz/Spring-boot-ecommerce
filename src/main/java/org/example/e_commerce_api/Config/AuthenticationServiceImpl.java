@@ -7,26 +7,24 @@ import org.example.e_commerce_api.DTO.Request.RegisterRequest;
 import org.example.e_commerce_api.DTO.Response.LoginResponse;
 import org.example.e_commerce_api.DTO.Response.MeResponse;
 import org.example.e_commerce_api.DTO.Response.RegisterResponse;
-import org.example.e_commerce_api.Entity.Carts;
 import org.example.e_commerce_api.Entity.Role;
 import org.example.e_commerce_api.Entity.Users;
 import org.example.e_commerce_api.Exception.ResourceNotFoundException;
 import org.example.e_commerce_api.Exception.UnauthorizedException;
 import org.example.e_commerce_api.Mapper.RoleMapper;
-import org.example.e_commerce_api.Repository.CartRepository;
 import org.example.e_commerce_api.Repository.RoleRepository;
 import org.example.e_commerce_api.Repository.UserRepository;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -83,13 +81,36 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public MeResponse me() {
-        Authentication authentication = SecurityContextHolder.getContext()
-                .getAuthentication();
-        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+
+        Authentication authentication =
+                SecurityContextHolder.getContext()
+                        .getAuthentication();
+
+        CustomUserDetails userDetails =
+                (CustomUserDetails) authentication.getPrincipal();
+
+        Users user =
+                userRepository.findByEmailAndEnabled(
+                                userDetails.getUsername(),
+                                true
+                        )
+                        .orElseThrow(
+                                () -> new ResourceNotFoundException(
+                                        "User not found"
+                                )
+                        );
+
+        Set<String> roles =
+                user.getRoles()
+                        .stream()
+                        .map(Role::getName)
+                        .collect(Collectors.toSet());
+
         return MeResponse.builder()
                 .id(userDetails.getId())
                 .fullName(userDetails.getFullName())
                 .email(userDetails.getUsername())
+                .roles(roles)
                 .build();
     }
 }

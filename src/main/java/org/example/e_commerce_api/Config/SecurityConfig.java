@@ -44,6 +44,16 @@ public class SecurityConfig {
         .authorizeHttpRequests(
             request ->
                 request
+                        .requestMatchers(
+                                "/login",
+                                "/register",
+                                "/dashboard",
+                                "/admin/**",
+                                "/shop/**",
+                                "/css/**",
+                                "/js/**",
+                                "/images/**"
+                        ).permitAll()
                         .requestMatchers("/api/v1/auth/**").permitAll()
                         .requestMatchers("/error").permitAll()
                         // Allow public access to Swagger UI & API docs

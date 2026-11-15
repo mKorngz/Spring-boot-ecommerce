@@ -8,6 +8,7 @@ public class ProductMapper {
         return ProductResponse.builder()
                 .id(products.getId())
                 .name(products.getName())
+                .description(products.getDescription())
                 .price(products.getPrice())
                 .stock_quantity(products.getStock_quantity())
                 .category(CategoryMapper.toCategoryResponse(products.getCategories()))

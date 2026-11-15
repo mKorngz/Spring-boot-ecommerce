@@ -1,6 +1,8 @@
 spring:
   application:
     name: E_Commerce_API
+  thymeleaf:
+    cache: false
   datasource:
     url: jdbc:postgresql://localhost:5432/E_Commerce_DB
     username: postgres

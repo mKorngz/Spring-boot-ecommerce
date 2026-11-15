@@ -86,10 +86,12 @@ public class BaseBodyResponse<T> implements Serializable {
     }
     public static ResponseEntity<BaseBodyResponse<Void>> success(String message){
         BaseBodyResponse<Void> response = new BaseBodyResponse<>();
+        response.setSuccess(true);
         return ResponseEntity.ok(response);
     }
     public static <T> ResponseEntity<BaseBodyResponse<List<T>>> pageSuccess(Page<T> page, String message){
         BaseBodyResponse<List<T>> response = new BaseBodyResponse<>();
+        response.setSuccess(true);
         response.setData(page.getContent());
         response.setMeta(page.getPageable().isUnpaged() ? null : new PageResponse(page));
         return ResponseEntity.ok(response);

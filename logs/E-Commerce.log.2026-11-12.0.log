@@ -1,0 +1,173 @@
+2026-11-12T20:03:48.247+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.ECommerceApiApplication            : Starting ECommerceApiApplication using Java 17.0.20.1 with PID 8032 (D:\My SpringBoot Project\Spring-boot-ecommerce\target\classes started by MK in D:\My SpringBoot Project\Spring-boot-ecommerce)
+2026-11-12T20:03:48.251+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.ECommerceApiApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T20:03:48.308+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-12T20:03:49.697+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T20:03:49.807+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 9 JPA repository interfaces.
+2026-11-12T20:03:50.971+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-12T20:03:50.986+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-12T20:03:50.987+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-11-12T20:03:51.064+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-12T20:03:51.065+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2756 ms
+2026-11-12T20:03:51.252+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-12T20:03:51.329+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-11-12T20:03:51.375+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-12T20:03:51.758+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T20:03:51.802+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-12T20:03:52.521+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@516d88d7
+2026-11-12T20:03:52.523+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-12T20:03:52.616+07:00  WARN 8032 --- [E_Commerce_API] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-12T20:03:52.645+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-12T20:03:54.209+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-12T20:03:54.595+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T20:03:55.088+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
+2026-11-12T20:03:55.486+07:00  WARN 8032 --- [E_Commerce_API] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-12T20:03:55.926+07:00 DEBUG 8032 --- [E_Commerce_API] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, JwtAuthFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-11-12T20:03:56.408+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-11-12T20:03:56.454+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-12T20:03:56.465+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.ECommerceApiApplication            : Started ECommerceApiApplication in 8.84 seconds (process running for 10.617)
+2026-11-12T20:03:56.616+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission PRODUCT_CREATE has been created
+2026-11-12T20:03:56.631+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission PRODUCT_VIEW has been created
+2026-11-12T20:03:56.637+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission PRODUCT_UPDATE has been created
+2026-11-12T20:03:56.644+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission PRODUCT_DELETE has been created
+2026-11-12T20:03:56.655+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CATEGORY_CREATE has been created
+2026-11-12T20:03:56.662+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CATEGORY_VIEW has been created
+2026-11-12T20:03:56.665+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CATEGORY_UPDATE has been created
+2026-11-12T20:03:56.669+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CATEGORY_DELETE has been created
+2026-11-12T20:03:56.674+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ORDER_CREATE has been created
+2026-11-12T20:03:56.681+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ORDER_VIEW has been created
+2026-11-12T20:03:56.687+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ORDER_UPDATE has been created
+2026-11-12T20:03:56.694+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ORDER_CANCEL has been created
+2026-11-12T20:03:56.697+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CUSTOMER_VIEW has been created
+2026-11-12T20:03:56.702+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CUSTOMER_UPDATE has been created
+2026-11-12T20:03:56.705+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CART_VIEW has been created
+2026-11-12T20:03:56.723+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CART_ADD_ITEM has been created
+2026-11-12T20:03:56.732+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CART_UPDATE_ITEM has been created
+2026-11-12T20:03:56.734+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CART_REMOVE_ITEM has been created
+2026-11-12T20:03:56.737+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission CART_CLEAR has been created
+2026-11-12T20:03:56.740+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ROLE_VIEW has been created
+2026-11-12T20:03:56.742+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ROLE_CREATE has been created
+2026-11-12T20:03:56.744+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ROLE_UPDATE has been created
+2026-11-12T20:03:56.747+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Permission ROLE_DELETE has been created
+2026-11-12T20:03:56.772+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Role ADMIN already exists
+2026-11-12T20:03:56.778+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Role USER already exists
+2026-11-12T20:03:56.804+07:00  INFO 8032 --- [E_Commerce_API] [restartedMain] o.e.e.Config.DataInitializer             : Admin already exists
+2026-11-12T20:03:56.808+07:00  WARN 8032 --- [E_Commerce_API] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui/index.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-11-12T20:04:16.427+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-12T20:04:16.428+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-12T20:04:16.438+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-11-12T20:04:16.513+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
+2026-11-12T20:04:16.521+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/login
+2026-11-12T20:04:16.527+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:16.531+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
+2026-11-12T20:04:16.952+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /js/login.js
+2026-11-12T20:04:16.952+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/logo.jpg
+2026-11-12T20:04:16.952+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/images/logo.jpg
+2026-11-12T20:04:16.953+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:16.953+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/login.js
+2026-11-12T20:04:16.952+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/auth.css
+2026-11-12T20:04:16.953+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:16.953+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/css/auth.css
+2026-11-12T20:04:16.954+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:16.954+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /js/login.js
+2026-11-12T20:04:16.954+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/logo.jpg
+2026-11-12T20:04:16.956+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/auth.css
+2026-11-12T20:04:17.024+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-11-12T20:04:17.026+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/favicon.ico
+2026-11-12T20:04:17.026+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:22.817+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /css/auth.css
+2026-11-12T20:04:22.819+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/css/auth.css
+2026-11-12T20:04:22.820+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:22.821+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /css/auth.css
+2026-11-12T20:04:22.879+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2026-11-12T20:04:22.880+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/.well-known/appspecific/com.chrome.devtools.json
+2026-11-12T20:04:22.880+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:55.748+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-11-12T20:04:55.771+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/api/v1/auth/login
+2026-11-12T20:04:55.778+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:55.780+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-11-12T20:04:56.153+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-11-12T20:04:56.370+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/auth/me
+2026-11-12T20:04:56.371+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/api/v1/auth/me
+2026-11-12T20:04:56.450+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/auth/me
+2026-11-12T20:04:56.482+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /admin/dashboard
+2026-11-12T20:04:56.483+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/admin/dashboard
+2026-11-12T20:04:56.484+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:56.484+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /admin/dashboard
+2026-11-12T20:04:56.548+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /js/dashboard.js
+2026-11-12T20:04:56.548+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/dashboard.js
+2026-11-12T20:04:56.548+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:56.539+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /css/admin.css
+2026-11-12T20:04:56.552+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/css/admin.css
+2026-11-12T20:04:56.552+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /js/dashboard.js
+2026-11-12T20:04:56.553+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:56.552+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /js/auth-guard.js
+2026-11-12T20:04:56.562+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/auth-guard.js
+2026-11-12T20:04:56.563+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:56.563+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /js/auth-guard.js
+2026-11-12T20:04:56.563+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /css/admin.css
+2026-11-12T20:04:56.743+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/admin/dashboard
+2026-11-12T20:04:56.743+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/api/v1/admin/dashboard
+2026-11-12T20:04:56.800+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-11-12T20:04:56.801+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/favicon.ico
+2026-11-12T20:04:56.802+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:04:56.823+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/admin/dashboard
+2026-11-12T20:04:56.826+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity org.example.e_commerce_api.Controller.DashboardController.getDashboard(); target is of class [org.example.e_commerce_api.Controller.DashboardController]
+2026-11-12T20:04:56.836+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity org.example.e_commerce_api.Controller.DashboardController.getDashboard(); target is of class [org.example.e_commerce_api.Controller.DashboardController]
+2026-11-12T20:05:11.114+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /admin/products
+2026-11-12T20:05:11.115+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/admin/products
+2026-11-12T20:05:11.115+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:11.115+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /admin/products
+2026-11-12T20:05:11.153+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /js/auth-guard.js
+2026-11-12T20:05:11.155+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /css/admin.css
+2026-11-12T20:05:11.155+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/auth-guard.js
+2026-11-12T20:05:11.155+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:11.155+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/css/admin.css
+2026-11-12T20:05:11.160+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /js/products.js
+2026-11-12T20:05:11.160+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /js/auth-guard.js
+2026-11-12T20:05:11.161+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/products.js
+2026-11-12T20:05:11.161+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:11.156+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:11.162+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /css/admin.css
+2026-11-12T20:05:11.162+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /js/products.js
+2026-11-12T20:05:11.232+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/products
+2026-11-12T20:05:11.233+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/api/v1/products
+2026-11-12T20:05:11.235+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-11-12T20:05:11.235+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/favicon.ico
+2026-11-12T20:05:11.235+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:11.248+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/products
+2026-11-12T20:05:18.378+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /admin/dashboard
+2026-11-12T20:05:18.379+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/admin/dashboard
+2026-11-12T20:05:18.379+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:18.380+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /admin/dashboard
+2026-11-12T20:05:18.416+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /js/auth-guard.js
+2026-11-12T20:05:18.416+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/auth-guard.js
+2026-11-12T20:05:18.417+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:18.417+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /js/auth-guard.js
+2026-11-12T20:05:18.423+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /css/admin.css
+2026-11-12T20:05:18.423+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /js/dashboard.js
+2026-11-12T20:05:18.425+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/css/admin.css
+2026-11-12T20:05:18.430+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/js/dashboard.js
+2026-11-12T20:05:18.431+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:18.431+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /js/dashboard.js
+2026-11-12T20:05:18.431+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:18.435+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /css/admin.css
+2026-11-12T20:05:18.479+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/admin/dashboard
+2026-11-12T20:05:18.481+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-11-12T20:05:18.481+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/favicon.ico
+2026-11-12T20:05:18.480+07:00  INFO 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.e.e.Config.JWT.JwtAuthFilter           : REQUEST URL:http://localhost:8080/api/v1/admin/dashboard
+2026-11-12T20:05:18.482+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-11-12T20:05:18.504+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/admin/dashboard
+2026-11-12T20:05:18.505+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity org.example.e_commerce_api.Controller.DashboardController.getDashboard(); target is of class [org.example.e_commerce_api.Controller.DashboardController]
+2026-11-12T20:05:18.505+07:00 DEBUG 8032 --- [E_Commerce_API] [http-nio-8080-exec-6] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity org.example.e_commerce_api.Controller.DashboardController.getDashboard(); target is of class [org.example.e_commerce_api.Controller.DashboardController]
+2026-11-12T20:41:18.556+07:00  INFO 8032 --- [E_Commerce_API] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-12T20:41:19.142+07:00  INFO 8032 --- [E_Commerce_API] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-11-12T20:41:19.152+07:00  INFO 8032 --- [E_Commerce_API] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T20:41:19.159+07:00  INFO 8032 --- [E_Commerce_API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-12T20:41:19.172+07:00  INFO 8032 --- [E_Commerce_API] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
