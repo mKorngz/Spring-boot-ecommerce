@@ -247,6 +247,8 @@ public class OrderServiceImpl implements OrderService {
                 .id(order.getId())
                 .order_number(order.getOrder_number())
                 .userId(order.getUsers().getId())
+                .customerName(order.getUsers().getFullName())
+                .customerEmail(order.getUsers().getEmail())
                 .total_amount(order.getTotal_amount())
                 .status(order.getOrderStatusEnum())
                 .createdAt(order.getCreatedAt())

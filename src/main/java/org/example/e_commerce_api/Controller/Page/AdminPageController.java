@@ -20,4 +20,8 @@ public class AdminPageController {
     public String categories() {
         return "admin/categories";
     }
+    @GetMapping("/orders")
+    public String orders() {
+        return "admin/orders";
+    }
 }

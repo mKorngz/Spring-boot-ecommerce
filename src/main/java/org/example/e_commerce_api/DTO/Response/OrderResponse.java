@@ -18,6 +18,10 @@ public class OrderResponse {
 
     private Long userId;
 
+    private String customerName;
+
+    private String customerEmail;
+
     private Double total_amount;
 
     private OrderStatusEnum status;
