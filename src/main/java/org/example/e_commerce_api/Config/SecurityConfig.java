@@ -41,30 +41,32 @@ public class SecurityConfig {
         .requestCache(AbstractHttpConfigurer::disable)
         .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
         .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-        .authorizeHttpRequests(
-            request ->
-                request
-                        .requestMatchers(
-                                "/login",
-                                "/register",
-                                "/dashboard",
-                                "/admin/**",
-                                "/shop/**",
-                                "/css/**",
-                                "/js/**",
-                                "/images/**"
-                        ).permitAll()
-                        .requestMatchers("/api/v1/auth/**").permitAll()
-                        .requestMatchers("/error").permitAll()
-                        // Allow public access to Swagger UI & API docs
-                        .requestMatchers(
-                                "/swagger-ui/**",
-                                "/swagger-ui.html",
-                                "/v3/api-docs/**",
-                                "/v3/api-docs"
-                        ).permitAll()
+        .authorizeHttpRequests(request -> request
+                    .requestMatchers(
+                            "/login",
+                            "/register",
+                            "/admin/**",
+                            "/shop/**",
+                            "/css/**",
+                            "/js/**",
+                            "/images/**",
+                            "/error"
+                    ).permitAll()
+
+                    .requestMatchers("/api/v1/auth/**")
+                    .permitAll()
+
+                    .requestMatchers("/api/v1/admin/**")
+                    .hasRole("ADMIN")
+
+                    .requestMatchers(
+                              "/api/v1/products/**",
+                              "/api/v1/categories/**"
+                    ).permitAll()
+
                     .anyRequest()
-                    .authenticated())
+                    .authenticated()
+            )
         .exceptionHandling(
             ex ->
                 ex.authenticationEntryPoint(customAuthenticationEntryPoint)

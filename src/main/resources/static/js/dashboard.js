@@ -26,6 +26,7 @@ document.addEventListener(
                 fullName || "Admin";
         }
 
+        await loadRecentOrders();
         await loadDashboardStats();
     }
 );
@@ -110,4 +111,82 @@ function logout() {
 
     window.location.href =
         "/login";
+}
+async function loadRecentOrders() {
+
+    const token =
+        localStorage.getItem("token");
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/v1/admin/orders",
+                {
+                    headers: {
+                        Authorization:
+                            `Bearer ${token}`
+                    }
+                }
+            );
+
+        const result =
+            await response.json();
+
+        if (!result.success) {
+            return;
+        }
+
+        const orders =
+            result.data
+                .sort(
+                    (a, b) =>
+                        new Date(b.createdAt)
+                        - new Date(a.createdAt)
+                )
+                .slice(0, 5);
+
+        const tbody =
+            document.getElementById(
+                "recentOrdersBody"
+            );
+
+        tbody.innerHTML = "";
+
+        orders.forEach(order => {
+
+            tbody.innerHTML += `
+                <tr>
+
+                    <td>
+                        ${order.order_number}
+                    </td>
+
+                    <td>
+                        ${order.customerName}
+                    </td>
+
+                    <td>
+                        $${Number(
+                order.total_amount
+            ).toLocaleString()}
+                    </td>
+
+                    <td>
+                        <span class="status ${order.status.toLowerCase()}">
+                            ${order.status}
+                        </span>
+                    </td>
+
+                </tr>
+            `;
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Recent Orders Error:",
+            error
+        );
+    }
 }
